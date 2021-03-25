@@ -54,11 +54,11 @@ upstream_dns_servers:
 # external_cloud_provider:
 
 ## Set these proxy values in order to update package manager and docker daemon to use proxies
-# http_proxy: ""
-# https_proxy: ""
+http_proxy: "http://10.15.1.10:8080"
+https_proxy: "http://10.15.1.10:8080"
 
 ## Refer to roles/kubespray-defaults/defaults/main.yml before modifying no_proxy
-# no_proxy: ""
+no_proxy: "localhost,127.0.0.1,node1,node2,node3"
 
 ## Some problems may occur when downloading files over https proxy due to ansible bug
 ## https://github.com/ansible/ansible/issues/32750. Set this variable to False to disable
