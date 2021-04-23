@@ -12,6 +12,19 @@ all:
       ansible_host: 159.69.193.67
       ip: 159.69.193.67
       access_ip: 159.69.193.67
+    node4:
+      ansible_host: 94.130.168.205
+      ip: 94.130.168.205
+      access_ip: 94.130.168.205
+    node5:
+      ansible_host: 157.90.122.56
+      ip: 157.90.122.56
+      access_ip: 157.90.122.56
+    node6:
+      ansible_host: 157.90.126.75
+      ip: 157.90.126.75
+      access_ip: 157.90.126.75
+
   children:
     kube-master:
       hosts:
@@ -22,6 +35,9 @@ all:
         node1:
         node2:
         node3:
+        node4:
+        node5:
+        node6:
     etcd:
       hosts:
         node1:
